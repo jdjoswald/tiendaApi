@@ -1,0 +1,81 @@
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 ">
+        <div class="col ">
+
+          <div class="categoria" >
+            <button class="btn btn-primary" (click)=mostrar()> Mostrar todo</button>
+            <app-categoria-button  (cambiarTitulo)=ocultar($event)  *ngFor="let categoria of listCategoria"
+            [nombre]="categoria.nombre">
+            </app-categoria-button>
+
+          </div>
+          <p class="titulo">{{titulo}}</p>
+          <div class="col productos">
+            <div *ngFor="let product of listProducts" class="{{product.categoria.nombre}}">
+               <app-product-card     (carrito)=anadirCarrito($event) 
+              [nombre]="product.nombre" 
+              [imagen]="product.imagen" 
+              [precio]="product.precio"
+              [stock]=product.cantidad
+              [categoria]="product.categoria.nombre"
+              [codigo]="product.id"
+              [descripcion]="product.descripcion">
+              
+            </app-product-card>
+            </div>
+            
+
+          </div>
+           
+         
+        </div>
+      </div>
+      <div class="col-md-4 cesta" >
+        <div class="carrito"*ngIf="listCarrito.length<1">
+          <p>La cesta esta vacia</p>
+        </div>
+        <div class="carrito" *ngIf="listCarrito.length>0" style="border: 1px; ">
+          <h2 style="border-bottom: 1px solid black">CESTA</h2>
+          <div class=" col buy" style="justify-content: center;">
+           
+            <div >
+              
+                <h4>TOTAL: ${{calculartotal()}}</h4>
+             
+              
+              
+            </div>
+            
+            <app-car-product (idborrar)=borrarCarrito($event)  *ngFor="let listProductsInCar of listCarrito" 
+            [nombre]="listProductsInCar.Articulo.nombre" 
+            [imagen]="listProductsInCar.Articulo.imagen" 
+            [precio]="listProductsInCar.Articulo.precio"
+            [stock]=listProductsInCar.cantidad
+            [id]=listProductsInCar.Articulo.id
+            >
+            
+          </app-car-product>
+          
+            <div class="row">
+              <div class="col mb-6">
+                <button class="btn btn-success" (click)="comprar()"> 
+                  <fa-icon [icon]="icons.shoppingBag"></fa-icon>
+                  Comprar
+                </button>
+              </div>
+              <div class="col mb-6">
+                <button class="btn btn-danger" (click)="borrarTodos()"> 
+                  <fa-icon [icon]="icons.trash"></fa-icon>
+                  Borrar todo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+     
+      </div>
+    </div>
+  
+  </div>

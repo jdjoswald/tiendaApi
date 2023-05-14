@@ -1,0 +1,20 @@
+
+<div class="container ">
+    <div class="formBack">
+        <div class="titulo" >
+             <h1>Agregar categoria</h1>
+        </div>
+        <div class="col md-6">
+            <form  id="myForm" method="post">
+                <div class="form-group mx-4 ">
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" [(ngModel)]="nombre" name="nombre" id="nombre" class="form-control ">
+                </div>
+                <div class="botones d-flex justify-content-center"> 
+                    <button (click)="enviar()" class="btn btn-primary mx-2">Guardar</button>
+                    <a href="../index.html" class="btn btn-danger">Atras</a>
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>

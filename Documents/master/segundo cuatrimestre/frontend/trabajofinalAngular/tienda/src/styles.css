@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.formBack{
+    background-color: lightgray;
+    margin: 0.5rem;
+    display: block;
+    justify-content: center;
+    border-radius: 2rem;
+    margin-bottom: 5rem;
+ }
+
+ .botones{
+    margin: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: block;
+    justify-content: center;
+ }
+ .titulo{
+    text-align: center;
+ }

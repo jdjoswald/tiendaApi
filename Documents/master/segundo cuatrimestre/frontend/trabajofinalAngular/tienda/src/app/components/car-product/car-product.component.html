@@ -1,0 +1,21 @@
+
+<div class="cartArt card col">
+    <div class="card-body">
+        <div class="row">
+            <div class="col">
+                <img class="imagenCarrito" src="{{imagen}}" alt="" >
+            </div>
+            <div class="col info">
+                <div>{{nombre}}</div>
+                <div>Cantidad: {{stock}}</div>
+                <div>Precio: ${{precio}} </div>
+            </div>
+        </div>
+        <div class="boton">
+            <button (click)="borrar(id)" class="fas  btn btn-danger borrado"> 
+            <fa-icon [icon]="faTrashAlt"></fa-icon>
+            Borrar</button>
+        </div>
+    </div>
+</div>
+

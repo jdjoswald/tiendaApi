@@ -1,0 +1,47 @@
+.cartArt > *{
+    margin-bottom: 0.1rem;
+    overflow: hidden;
+   
+   
+  }
+
+  .card {
+    border-radius: 15px;
+  }
+  .info{
+    margin-bottom: 0.1rem;
+     
+  
+    
+  }
+
+  .info >*{
+
+    margin-left: 1rem;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    overflow: hidden; /* Oculta cualquier texto que desborde el elemento */
+    text-overflow: ellipsis;
+    text-align: start;
+    
+  }
+
+
+  .boton .btn{
+    
+    margin-bottom: 0.5rem;
+    margin-top: 0.3rem;
+    width: 10rem;
+  }
+  .cartArt {
+    
+    margin-bottom: 10px;
+    
+  }
+  .imagenCarrito {
+    max-width: 75%;
+    max-height: 75%;
+    display: block;
+    margin:  auto;
+    vertical-align: middle;
+
+    }

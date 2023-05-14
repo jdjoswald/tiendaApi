@@ -1,0 +1,31 @@
+<div  class="card {{categoria}} mb-2">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4 imgcard" style="z-index: 2;">
+          <img class="mini" src="{{imagen}}" alt="" [ngClass]="{'opacity-50': stock < 1}">
+        </div>
+        <div class="col-md-4" style="z-index: 0;">
+           
+              <h3>{{nombre}}</h3>
+              <span>codigo:{{codigo}}</span>
+           
+           
+        
+          <p class="descripcion">
+            {{descripcion}}
+          </p>
+          <p style="color: blue;">{{categoria}}</p>
+        </div>
+        <div class="col-md-4 stockdiv d-flex flex-column justify-content-center">
+          <p>$ {{precio}}</p>
+          <p class="stock">Stock: {{stock}}</p>
+          <button class="btn btn-primary " (click)="onBotonClick(codigo)" type="submit" [disabled]="stock <= 0">  
+            <fa-icon [icon]="faShoppingCart"></fa-icon>
+           
+            Agregar a la cesta</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+ 

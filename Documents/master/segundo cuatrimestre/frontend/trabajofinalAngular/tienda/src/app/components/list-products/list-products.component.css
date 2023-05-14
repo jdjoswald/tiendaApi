@@ -1,0 +1,10 @@
+.categoria > *{
+    margin: 0.1rem;
+  }
+  .cesta{
+     height: 100vh; 
+     background-color: #f0f0f0;
+     text-align: center;
+     border-radius: 5%;
+     margin-top: 1rem;
+  }

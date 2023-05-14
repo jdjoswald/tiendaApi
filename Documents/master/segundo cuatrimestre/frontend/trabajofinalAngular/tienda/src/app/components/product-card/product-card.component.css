@@ -1,0 +1,40 @@
+.opacity-50 {
+    opacity: 0.5;
+  }
+  .imgcard{
+    justify-content: center;
+  }
+    .card {
+      margin-top: 0.5rem;
+    border-radius: 15px;
+  }
+  .mini{
+    width: 6.25rem;
+    height: 6.25rem;
+    position: 'static';
+    top: 'auto'; 
+    left: 'auto';
+    transition: 1s; 
+    z-index: 2;
+    display: block;
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+
+  .mini:hover {
+    width: 25rem;
+    height:25rem;
+    z-index: 2;
+    position: 'absolute';
+    top: '50%';
+    left: '50%'; 
+    transition: 2s;/* Para que la imagen quede sobre otros elementos */
+  }
+
+  .imgcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  

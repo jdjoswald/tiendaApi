@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="formBack">
+    <div class="titulo" >
+      <h1>Stock de Articulo</h1>
+    </div>
+    <div class="col md-6">
+      <form  id="myForm" method="post">
+        <div class="form-group mx-4 ">
+
+          <label for="Articulos">Articulos:</label>
+          <select name="Articulos" id="Articulos" class="form-control" [(ngModel)]="articulo">
+            <option *ngFor=" let product of listProducts"  value="{{product.id}}">{{product.nombre}}({{product.cantidad}})</option>
+          </select>
+        
+        </div>
+        <div class="form-group mx-4 ">
+          
+            <label for="Stock">Stock:</label>
+            <input type="number" [(ngModel)]="cantidad" name="Stock" id="Stock" class="form-control">
+                    
+        </div>
+        <div class="botones d-flex justify-content-center"> 
+            <button (click)="enviar()" class="btn btn-primary mx-2">Añadir</button>
+        </div>
+      </form>
+    </div>
+  </div>       
+</div>
